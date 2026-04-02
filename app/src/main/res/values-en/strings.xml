@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">assessment1</string>
+    <string name="bangun_datar">Flat Shapes</string>
+    <string name="bangun_ruang">Solid Shapes</string>
+    <string name="pilih_bangun_datar">Select a Flat Shape</string>
+    <string name="persegi">Square</string>
+    <string name="lingkaran">Circle</string>
+    <string name="segitiga">Triangle</string>
+    <string name="panjang">Length</string>
+    <string name="lebar">Width</string>
+    <string name="hitung">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name="sisi">Side</string>
+    <string name="diameter">Diameter</string>
+    <string name="sisi1">Side 1</string>
+    <string name="sisi2">Side 2</string>
+    <string name="sisi3">Side 3</string>
+    <string name="settings">Settings</string>
+    <string name="indonesia">Indonesian</string>
+    <string name="ukuran_teks">Text Size</string>
+    <string name="inggris">English</string>
+    <string name="version">App Version</string>
+    <string name="bahasa">Language</string>
+    <string name="input_invalid">Cannot be empty</string>
+    <string name="jariJari">Radius</string>
+    <string name="luas">Area: %1$.2f</string>
+    <string name="keliling">Perimeter: %1$.2f</string>
+    <string name="persegi_panjang">Rectangle</string>
+    <string name="intro_bangun_datar">In this menu, you can calculate the area and perimeter of flat shapes. What are you waiting for? Try it now!</string>
+    <string name="intro_bangun_ruang">In this menu, you can calculate the area and perimeter of solid shapes. What are you waiting for? Try it now!</string>
+    <string name="kontak">Contact</string>
+</resources>

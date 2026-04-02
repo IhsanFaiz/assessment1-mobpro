@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">Assesment1-mobpro</string>
+    <string name="app_name">assessment1</string>
+    <string name="bangun_datar">Bangun Datar</string>
+    <string name="bangun_ruang">Bangun Ruang</string>
+    <string name="pilih_bangun_datar">Pilih Bangun Datar</string>
+    <string name="persegi">Persegi</string>
+    <string name="lingkaran">Lingkaran</string>
+    <string name="segitiga">Segitiga</string>
+    <string name="panjang">Panjang</string>
+    <string name="lebar">Lebar</string>
+    <string name="hitung">Hitung</string>
+    <string name="reset">Reset</string>
+    <string name="sisi">Sisi</string>
+    <string name="diameter">Diameter</string>
+    <string name="sisi1">Sisi 1</string>
+    <string name="sisi2">Sisi 2</string>
+    <string name="sisi3">Sisi 3</string>
+    <string name="settings">Pengaturan</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="ukuran_teks">Ukuran Teks</string>
+    <string name="inggris">English</string>
+    <string name="version">Versi Aplikasi</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="input_invalid">Tidak boleh kosong</string>
+    <string name="jariJari">Jari-jari</string>
+    <string name="luas">Luas: %1$.2f</string>
+    <string name="keliling">Keliling: %1$.2f</string>
+    <string name="persegi_panjang">Persegi Panjang</string>
+    <string name="intro_bangun_datar">Pada menu ini anda bisa menghitung luas dan keliling bangun datar, tunggu apa lagi cobalah sekarang!</string>
+    <string name="intro_bangun_ruang">Pada menu ini anda bisa menghitung luas dan keliling bangun ruang, tunggu apa lagi cobalah sekarang!</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="devEmail" translatable="false">ihsanfaiz200@gmail.com</string>
+    <string name="kontak">Kontak</string>
+    <string name="instagram" translatable="false">Instagram</string>
+    <string name="version_num" translatable="false">1.0.0</string>
 </resources>
