@@ -35,7 +35,7 @@ import com.ihsanfaiz0048.assesment1_mobpro.navigation.SetupNavGraph
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
+fun MainScreen(isDarkMode: Boolean, onToggleDarkMode: () -> Unit) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -142,6 +142,8 @@ fun MainScreen() {
         SetupNavGraph (
             navController,
             modifier = Modifier.padding(innerPadding).padding(16.dp),
+            isDarkMode = isDarkMode,
+            onToggleDarkMode = onToggleDarkMode
         )
     }
 }

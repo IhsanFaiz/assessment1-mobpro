@@ -9,9 +9,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.BangunDatarScreen
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.BangunRuangScreen
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.SettingsContent
 
 @Composable
-fun SetupNavGraph(navController: NavHostController = rememberNavController(), modifier: Modifier){
+fun SetupNavGraph(navController: NavHostController = rememberNavController(), modifier: Modifier, isDarkMode: Boolean, onToggleDarkMode: () -> Unit){
     NavHost(
         navController = navController,
         startDestination = Screen.BangunDatar.route,
@@ -19,5 +20,11 @@ fun SetupNavGraph(navController: NavHostController = rememberNavController(), mo
     ) {
         composable(Screen.BangunDatar.route) { BangunDatarScreen() }
         composable(Screen.BangunRuang.route) { BangunRuangScreen() }
+        composable(Screen.Settings.route) {
+            SettingsContent(
+                isDarkMode = isDarkMode,
+                onToggleDarkMode = onToggleDarkMode
+            )
+        }
     }
 }
