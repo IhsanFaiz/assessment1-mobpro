@@ -1,6 +1,7 @@
 package com.ihsanfaiz0048.assesment1_mobpro.ui.screen
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -23,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.model.Hasil
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiPanjangContent
 import kotlin.math.sqrt
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -109,19 +112,19 @@ fun BangunDatarScreen(){
                 }
             }
         }
-//        Spacer(modifier = Modifier.padding(bottom = 16.dp))
-//        when (selectedOption) {
-//            listBangunDatar[0].nama -> {
-//                PersegiPanjangContent(listBangunDatar[0])
-//            }
-//            listBangunDatar[1].nama -> {
-//                PersegiContent(listBangunDatar[1])
-//            }
+        Spacer(modifier = Modifier.padding(bottom = 16.dp))
+        when (selectedOption) {
+            listBangunDatar[0].nama -> {
+                PersegiPanjangContent(listBangunDatar[0])
+            }
+            listBangunDatar[1].nama -> {
+                PersegiContent(listBangunDatar[1])
+            }
 //            listBangunDatar[2].nama -> {
 //                LingkaranContent(listBangunDatar[2])
 //            }listBangunDatar[3].nama -> {
 //            SegitigaContent(listBangunDatar[3])
-//        }
-//        }
+
+        }
     }
 }
