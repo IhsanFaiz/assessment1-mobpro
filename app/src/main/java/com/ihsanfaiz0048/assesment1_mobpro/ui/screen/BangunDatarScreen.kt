@@ -24,8 +24,10 @@ import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.model.Hasil
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.LingkaranContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiPanjangContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.SegitigaContent
 import kotlin.math.sqrt
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -117,14 +119,17 @@ fun BangunDatarScreen(){
             listBangunDatar[0].nama -> {
                 PersegiPanjangContent(listBangunDatar[0])
             }
+
             listBangunDatar[1].nama -> {
                 PersegiContent(listBangunDatar[1])
             }
-//            listBangunDatar[2].nama -> {
-//                LingkaranContent(listBangunDatar[2])
-//            }listBangunDatar[3].nama -> {
-//            SegitigaContent(listBangunDatar[3])
 
+            listBangunDatar[2].nama -> {
+                LingkaranContent(listBangunDatar[2])
+            }
+            listBangunDatar[3].nama -> {
+                SegitigaContent(listBangunDatar[3])
+            }
         }
     }
 }
