@@ -34,7 +34,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
-import com.ihsanfaiz0048.assesment1_mobpro.model.Hasil
+import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ErrorHint
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 
@@ -42,7 +42,7 @@ import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 fun PersegiPanjangContent(bangunDatar: BangunDatar){
     var panjang by rememberSaveable { mutableStateOf("") }
     var lebar by rememberSaveable { mutableStateOf("") }
-    var hasil by remember { mutableStateOf<Hasil?>(null) }
+    var hasilBangunDatar by remember { mutableStateOf<HasilBangunDatar?>(null) }
     var panjangImage by rememberSaveable { mutableFloatStateOf(0F) }
     var lebarImage by rememberSaveable { mutableFloatStateOf(0F) }
     var panjangError by rememberSaveable { mutableStateOf(false) }
@@ -91,7 +91,7 @@ fun PersegiPanjangContent(bangunDatar: BangunDatar){
                     val p = panjang.toFloatOrNull()
                     val l = lebar.toFloatOrNull()
                     if (p != null && l != null){
-                        hasil = bangunDatar.hitung(listOf(p, l))
+                        hasilBangunDatar = bangunDatar.hitung(listOf(p, l))
                         panjangImage = p
                         lebarImage = l
                     }
@@ -106,7 +106,7 @@ fun PersegiPanjangContent(bangunDatar: BangunDatar){
                 onClick = {
                     panjang = ""
                     lebar = ""
-                    hasil = null
+                    hasilBangunDatar = null
                 },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.error
@@ -118,19 +118,19 @@ fun PersegiPanjangContent(bangunDatar: BangunDatar){
             }
         }
         Spacer(modifier = Modifier.padding(top = 16.dp))
-        if (hasil?.luas != null){
+        if (hasilBangunDatar?.luas != null){
             HorizontalDivider(
                 modifier = Modifier.padding(vertical = 8.dp),
                 thickness = 1.dp
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = stringResource(R.string.luas, hasil?.luas?: 0.0),
+                text = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0),
                 style = MaterialTheme.typography.headlineSmall
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = stringResource(R.string.keliling, hasil?.keliling?: 0.0),
+                text = stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0),
                 style = MaterialTheme.typography.headlineSmall
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))

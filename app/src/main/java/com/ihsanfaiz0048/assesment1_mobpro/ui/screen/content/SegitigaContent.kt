@@ -34,7 +34,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
-import com.ihsanfaiz0048.assesment1_mobpro.model.Hasil
+import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ErrorHint
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 
@@ -46,7 +46,7 @@ fun SegitigaContent(bangunDatar: BangunDatar){
     var sisi1Error by rememberSaveable { mutableStateOf(false) }
     var sisi2Error by rememberSaveable { mutableStateOf(false) }
     var sisi3Error by rememberSaveable { mutableStateOf(false) }
-    var hasil by remember { mutableStateOf<Hasil?>(null) }
+    var hasilBangunDatar by remember { mutableStateOf<HasilBangunDatar?>(null) }
     var sisi1Image by rememberSaveable { mutableFloatStateOf(0F) }
     var sisi2Image by rememberSaveable { mutableFloatStateOf(0F) }
     var sisi3Image by rememberSaveable { mutableFloatStateOf(0F) }
@@ -108,7 +108,7 @@ fun SegitigaContent(bangunDatar: BangunDatar){
                     val l = sisi2.toFloatOrNull()
                     val t = sisi3.toFloatOrNull()
                     if (p != null && l != null && t != null){
-                        hasil = bangunDatar.hitung(listOf(p, l, t))
+                        hasilBangunDatar = bangunDatar.hitung(listOf(p, l, t))
                         sisi1Image = p
                         sisi2Image = l
                         sisi3Image = t
@@ -125,7 +125,7 @@ fun SegitigaContent(bangunDatar: BangunDatar){
                     sisi1 = ""
                     sisi2 = ""
                     sisi3 = ""
-                    hasil = null
+                    hasilBangunDatar = null
                 },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.error
@@ -137,19 +137,19 @@ fun SegitigaContent(bangunDatar: BangunDatar){
             }
         }
         Spacer(modifier = Modifier.padding(top = 16.dp))
-        if (hasil?.luas != null){
+        if (hasilBangunDatar?.luas != null){
             HorizontalDivider(
                 modifier = Modifier.padding(vertical = 8.dp),
                 thickness = 1.dp
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = stringResource(R.string.luas, hasil?.luas?: 0.0),
+                text = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0),
                 style = MaterialTheme.typography.headlineSmall
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = stringResource(R.string.keliling, hasil?.keliling?: 0.0),
+                text = stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0),
                 style = MaterialTheme.typography.headlineSmall
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))

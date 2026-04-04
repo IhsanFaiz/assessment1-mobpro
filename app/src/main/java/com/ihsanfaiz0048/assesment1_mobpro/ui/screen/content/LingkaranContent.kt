@@ -37,7 +37,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
-import com.ihsanfaiz0048.assesment1_mobpro.model.Hasil
+import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ErrorHint
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 
@@ -45,7 +45,7 @@ import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 fun LingkaranContent(bangunDatar: BangunDatar){
     var jariJari by rememberSaveable { mutableStateOf("") }
     var diameter by rememberSaveable { mutableStateOf("") }
-    var hasil by remember { mutableStateOf<Hasil?>(null) }
+    var hasilBangunDatar by remember { mutableStateOf<HasilBangunDatar?>(null) }
     var selectedOption by rememberSaveable { mutableStateOf("jari") }
     var diameterImage by rememberSaveable { mutableFloatStateOf(0F) }
     var jariJariImage by rememberSaveable { mutableFloatStateOf(0F) }
@@ -123,7 +123,7 @@ fun LingkaranContent(bangunDatar: BangunDatar){
                             val d = diameter.toFloatOrNull()
                             if (d != null){
                                 val r = d / 2
-                                hasil = bangunDatar.hitung(listOf(r))
+                                hasilBangunDatar = bangunDatar.hitung(listOf(r))
                                 diameterImage = d
                                 jariJariImage = r
                             }
@@ -137,7 +137,7 @@ fun LingkaranContent(bangunDatar: BangunDatar){
                     Button(
                         onClick = {
                             diameter = ""
-                            hasil = null
+                            hasilBangunDatar = null
                         },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.error
@@ -149,19 +149,19 @@ fun LingkaranContent(bangunDatar: BangunDatar){
                     }
                 }
                 Spacer(modifier = Modifier.padding(top = 16.dp))
-                if (hasil?.luas != null){
+                if (hasilBangunDatar?.luas != null){
                     HorizontalDivider(
                         modifier = Modifier.padding(vertical = 8.dp),
                         thickness = 1.dp
                     )
                     Spacer(modifier = Modifier.padding(top = 16.dp))
                     Text(
-                        text = stringResource(R.string.luas, hasil?.luas?: 0.0),
+                        text = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0),
                         style = MaterialTheme.typography.headlineSmall
                     )
                     Spacer(modifier = Modifier.padding(top = 16.dp))
                     Text(
-                        text = stringResource(R.string.keliling, hasil?.keliling?: 0.0),
+                        text = stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0),
                         style = MaterialTheme.typography.headlineSmall
                     )
                     Spacer(modifier = Modifier.padding(top = 16.dp))
@@ -223,7 +223,7 @@ fun LingkaranContent(bangunDatar: BangunDatar){
                             val p = jariJari.toFloatOrNull()
                             if (p != null){
                                 val d = p * 2
-                                hasil = bangunDatar.hitung(listOf(p))
+                                hasilBangunDatar = bangunDatar.hitung(listOf(p))
                                 jariJariImage = p
                                 diameterImage = d
                             }
@@ -237,7 +237,7 @@ fun LingkaranContent(bangunDatar: BangunDatar){
                     Button(
                         onClick = {
                             jariJari = ""
-                            hasil = null
+                            hasilBangunDatar = null
                         },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.error
@@ -249,19 +249,19 @@ fun LingkaranContent(bangunDatar: BangunDatar){
                     }
                 }
                 Spacer(modifier = Modifier.padding(top = 16.dp))
-                if (hasil?.luas != null){
+                if (hasilBangunDatar?.luas != null){
                     HorizontalDivider(
                         modifier = Modifier.padding(vertical = 8.dp),
                         thickness = 1.dp
                     )
                     Spacer(modifier = Modifier.padding(top = 16.dp))
                     Text(
-                        text = stringResource(R.string.luas, hasil?.luas?: 0.0),
+                        text = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0),
                         style = MaterialTheme.typography.headlineSmall
                     )
                     Spacer(modifier = Modifier.padding(top = 16.dp))
                     Text(
-                        text = stringResource(R.string.keliling, hasil?.keliling?: 0.0),
+                        text = stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0),
                         style = MaterialTheme.typography.headlineSmall
                     )
                     Spacer(modifier = Modifier.padding(top = 16.dp))

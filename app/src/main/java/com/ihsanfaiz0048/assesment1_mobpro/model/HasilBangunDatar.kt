@@ -1,6 +1,6 @@
 package com.ihsanfaiz0048.assesment1_mobpro.model
 
-data class Hasil(
+data class HasilBangunDatar(
     val luas: Float,
     val keliling: Float
 )

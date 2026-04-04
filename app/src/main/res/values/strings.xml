@@ -27,10 +27,16 @@
     <string name="keliling">Keliling: %1$.2f</string>
     <string name="persegi_panjang">Persegi Panjang</string>
     <string name="intro_bangun_datar">Pada menu ini anda bisa menghitung luas dan keliling bangun datar, tunggu apa lagi cobalah sekarang!</string>
-    <string name="intro_bangun_ruang">Pada menu ini anda bisa menghitung luas dan keliling bangun ruang, tunggu apa lagi cobalah sekarang!</string>
+    <string name="intro_bangun_ruang">Pada menu ini anda bisa menghitung volume dan luas permukaan bangun ruang, tunggu apa lagi cobalah sekarang!</string>
     <string name="email" translatable="false">Email</string>
     <string name="devEmail" translatable="false">ihsanfaiz200@gmail.com</string>
     <string name="kontak">Kontak</string>
     <string name="instagram" translatable="false">Instagram</string>
     <string name="version_num" translatable="false">1.0.0</string>
+    <string name="kubus">Kubus</string>
+    <string name="balok">Balok</string>
+    <string name="kerucut">Kerucut</string>
+    <string name="tabung">Tabung</string>
+    <string name="bola">Bola</string>
+    <string name="pilih_bangun_ruang">Pilih Bangun Ruang</string>
 </resources>

@@ -24,7 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
-import com.ihsanfaiz0048.assesment1_mobpro.model.Hasil
+import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.LingkaranContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiPanjangContent
@@ -39,19 +39,19 @@ fun BangunDatarScreen(){
     val listBangunDatar = listOf(
 
         BangunDatar(stringResource(R.string.persegi_panjang)) { input ->
-            Hasil(
+            HasilBangunDatar(
                 luas = input[0] * input[1],
                 keliling = 2 * (input[0] + input[1])
             )
         },
         BangunDatar(stringResource(R.string.persegi)){ input ->
-            Hasil(
+            HasilBangunDatar(
                 luas = input[0] * input[0],
                 keliling = 4 * input[0]
             )
         },
         BangunDatar(stringResource(R.string.lingkaran)){ input ->
-            Hasil(
+            HasilBangunDatar(
                 luas = (Math.PI * input[0] * input[0]).toFloat(),
                 keliling = (2 * Math.PI * input[0]).toFloat()
             )
@@ -65,13 +65,13 @@ fun BangunDatarScreen(){
 
                 val s = (a + b + c) / 2
 
-                Hasil(
+                HasilBangunDatar(
                     luas = sqrt(s * (s - a) * (s - b) * (s - c)),
                     keliling = a + b + c
                 )
 
             } else {
-                Hasil(
+                HasilBangunDatar(
                     luas = 0f,
                     keliling = 0f
                 )

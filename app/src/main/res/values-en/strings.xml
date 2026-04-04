@@ -28,6 +28,12 @@
     <string name="keliling">Perimeter: %1$.2f</string>
     <string name="persegi_panjang">Rectangle</string>
     <string name="intro_bangun_datar">In this menu, you can calculate the area and perimeter of flat shapes. What are you waiting for? Try it now!</string>
-    <string name="intro_bangun_ruang">In this menu, you can calculate the area and perimeter of solid shapes. What are you waiting for? Try it now!</string>
+    <string name="intro_bangun_ruang">In this menu, you can calculate the volume and surface area of solid shapes. What are you waiting for? Try it now!</string>
     <string name="kontak">Contact</string>
+    <string name="kubus">Cube</string>
+    <string name="balok">Cuboid</string>
+    <string name="kerucut">Cone</string>
+    <string name="tabung">Cylinder</string>
+    <string name="bola">Sphere</string>
+    <string name="pilih_bangun_ruang">Select a Solid Shape</string>
 </resources>
