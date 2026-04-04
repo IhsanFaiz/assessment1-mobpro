@@ -21,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,16 +40,16 @@ import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 
 @Composable
 fun SegitigaContent(bangunDatar: BangunDatar){
-    var sisi1 by remember { mutableStateOf("") }
-    var sisi2 by remember { mutableStateOf("") }
-    var sisi3 by remember { mutableStateOf("") }
-    var sisi1Error by remember { mutableStateOf(false) }
-    var sisi2Error by remember { mutableStateOf(false) }
-    var sisi3Error by remember { mutableStateOf(false) }
+    var sisi1 by rememberSaveable { mutableStateOf("") }
+    var sisi2 by rememberSaveable { mutableStateOf("") }
+    var sisi3 by rememberSaveable { mutableStateOf("") }
+    var sisi1Error by rememberSaveable { mutableStateOf(false) }
+    var sisi2Error by rememberSaveable { mutableStateOf(false) }
+    var sisi3Error by rememberSaveable { mutableStateOf(false) }
     var hasil by remember { mutableStateOf<Hasil?>(null) }
-    var sisi1Image by remember { mutableFloatStateOf(0F) }
-    var sisi2Image by remember { mutableFloatStateOf(0F) }
-    var sisi3Image by remember { mutableFloatStateOf(0F) }
+    var sisi1Image by rememberSaveable { mutableFloatStateOf(0F) }
+    var sisi2Image by rememberSaveable { mutableFloatStateOf(0F) }
+    var sisi3Image by rememberSaveable { mutableFloatStateOf(0F) }
 
     OutlinedTextField(
         value = sisi1,

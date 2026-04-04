@@ -23,6 +23,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -42,14 +43,14 @@ import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 
 @Composable
 fun LingkaranContent(bangunDatar: BangunDatar){
-    var jariJari by remember { mutableStateOf("") }
-    var diameter by remember { mutableStateOf("") }
+    var jariJari by rememberSaveable { mutableStateOf("") }
+    var diameter by rememberSaveable { mutableStateOf("") }
     var hasil by remember { mutableStateOf<Hasil?>(null) }
-    var selectedOption by remember { mutableStateOf("jari") }
-    var diameterImage by remember { mutableFloatStateOf(0F) }
-    var jariJariImage by remember { mutableFloatStateOf(0F) }
-    var jariJariError by remember { mutableStateOf(false) }
-    var diameterError by remember { mutableStateOf(false) }
+    var selectedOption by rememberSaveable { mutableStateOf("jari") }
+    var diameterImage by rememberSaveable { mutableFloatStateOf(0F) }
+    var jariJariImage by rememberSaveable { mutableFloatStateOf(0F) }
+    var jariJariError by rememberSaveable { mutableStateOf(false) }
+    var diameterError by rememberSaveable { mutableStateOf(false) }
 
     Row(
         modifier = Modifier.fillMaxWidth(),

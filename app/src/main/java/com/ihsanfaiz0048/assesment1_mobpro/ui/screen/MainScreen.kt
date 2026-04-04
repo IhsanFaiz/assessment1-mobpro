@@ -70,7 +70,6 @@ fun MainScreen(isDarkMode: Boolean, onToggleDarkMode: () -> Unit) {
                         Text(
                             text = topBarMenu
                         )
-
                     }
                 },
                 actions = {

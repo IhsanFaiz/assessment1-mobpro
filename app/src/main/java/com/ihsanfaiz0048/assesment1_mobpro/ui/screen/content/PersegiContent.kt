@@ -21,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,10 +40,10 @@ import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
 
 @Composable
 fun PersegiContent(bangunDatar: BangunDatar){
-    var sisi by remember { mutableStateOf("") }
+    var sisi by rememberSaveable { mutableStateOf("") }
     var hasil by remember { mutableStateOf<Hasil?>(null) }
-    var sisiImage by remember { mutableFloatStateOf(0F) }
-    var sisiError by remember { mutableStateOf(false) }
+    var sisiImage by rememberSaveable { mutableFloatStateOf(0F) }
+    var sisiError by rememberSaveable { mutableStateOf(false) }
 
     OutlinedTextField(
         value = sisi,
