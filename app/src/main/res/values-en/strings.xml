@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">assessment1</string>
+    <string name="app_name">assessment</string>
     <string name="bangun_datar">Flat Shapes</string>
     <string name="bangun_ruang">Solid Shapes</string>
     <string name="pilih_bangun_datar">Select a Flat Shape</string>
@@ -36,4 +36,7 @@
     <string name="tabung">Cylinder</string>
     <string name="bola">Sphere</string>
     <string name="pilih_bangun_ruang">Select a Solid Shape</string>
+    <string name="panjang_sisi">Side Length</string>
+    <string name="volume">Volume: %1$.2f</string>
+    <string name="luas_permukaan">Surface Area: %1$.2f</string>
 </resources>

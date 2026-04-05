@@ -1,4 +1,4 @@
-package com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content
+package com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

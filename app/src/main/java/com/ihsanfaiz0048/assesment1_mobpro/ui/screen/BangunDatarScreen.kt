@@ -25,10 +25,10 @@ import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunDatar
-import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.LingkaranContent
-import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiContent
-import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.PersegiPanjangContent
-import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.SegitigaContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar.LingkaranContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar.PersegiContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar.PersegiPanjangContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar.SegitigaContent
 import kotlin.math.sqrt
 
 @OptIn(ExperimentalMaterial3Api::class)

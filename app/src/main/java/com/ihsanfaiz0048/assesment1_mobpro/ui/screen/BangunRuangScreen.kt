@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunRuang
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.KubusContent
 import kotlin.math.PI
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -118,5 +119,21 @@ fun BangunRuangScreen(){
             }
         }
         Spacer(modifier = Modifier.padding(bottom = 16.dp))
+        when (selectedOption) {
+            listBangunRuang[0].nama -> {
+                KubusContent(listBangunRuang[0])
+            }
+//
+//            listBangunDatar[1].nama -> {
+//                PersegiContent(listBangunDatar[1])
+//            }
+//
+//            listBangunDatar[2].nama -> {
+//                LingkaranContent(listBangunDatar[2])
+//            }
+//            listBangunDatar[3].nama -> {
+//                SegitigaContent(listBangunDatar[3])
+//            }
+        }
     }
 }

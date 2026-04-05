@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">assessment1</string>
+    <string name="app_name">assessment</string>
     <string name="bangun_datar">Bangun Datar</string>
     <string name="bangun_ruang">Bangun Ruang</string>
     <string name="pilih_bangun_datar">Pilih Bangun Datar</string>
@@ -39,4 +39,7 @@
     <string name="tabung">Tabung</string>
     <string name="bola">Bola</string>
     <string name="pilih_bangun_ruang">Pilih Bangun Ruang</string>
+    <string name="panjang_sisi">Panjang Sisi</string>
+    <string name="volume">Volume: %1$.2f</string>
+    <string name="luas_permukaan">Luas Permukaan: %1$.2f</string>
 </resources>

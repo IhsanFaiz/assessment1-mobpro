@@ -9,7 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.BangunDatarScreen
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.BangunRuangScreen
-import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.content.SettingsContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar.SettingsContent
 
 @Composable
 fun SetupNavGraph(navController: NavHostController = rememberNavController(), modifier: Modifier, isDarkMode: Boolean, onToggleDarkMode: () -> Unit){
