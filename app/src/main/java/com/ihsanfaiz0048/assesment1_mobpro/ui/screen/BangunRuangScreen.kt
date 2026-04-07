@@ -21,12 +21,12 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.BalokContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.KerucutContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.KubusContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.TabungContent
 import kotlin.math.PI
@@ -134,8 +134,12 @@ fun BangunRuangScreen(){
             listBangunRuang[2].nama -> {
                 TabungContent(listBangunRuang[2])
             }
-//            listBangunDatar[3].nama -> {
-//                SegitigaContent(listBangunDatar[3])
+
+            listBangunRuang[3].nama -> {
+                KerucutContent(listBangunRuang[3])
+            }
+//            listBangunRuang[3].nama -> {
+//                KerucutContent(listBangunRuang[3])
 //            }
         }
     }
