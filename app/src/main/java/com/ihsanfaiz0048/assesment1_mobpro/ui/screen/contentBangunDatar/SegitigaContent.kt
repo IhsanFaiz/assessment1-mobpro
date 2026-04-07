@@ -26,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -187,8 +188,25 @@ fun SegitigaContent(bangunDatar: BangunDatar){
                 )
             }
 
-            val message = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0) + "\n" + stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0)
-            ShareButton(R.drawable.segitiga, stringResource(R.string.segitiga), message)
+            val context = LocalContext.current
+            val luas = (hasilBangunDatar?.luas?: 0.0).toFloat()
+            val keliling = (hasilBangunDatar?.keliling?: 0.0).toFloat()
+            val message = stringResource(R.string.segitiga) +
+                    "\n" +
+                    stringResource(R.string.sisi1) + ": " + sisi1Image +
+                    "\n" +
+                    stringResource(R.string.sisi2) + ": " + sisi2Image +
+                    "\n" +
+                    stringResource(R.string.sisi3) + ": " + sisi3Image +
+                    "\n" +
+                    stringResource(R.string.luas, luas) +
+                    "\n" +
+                    stringResource(R.string.keliling, keliling)
+
+            ShareButton(
+                context = context,
+                message = message
+            )
         }
     }
 }

@@ -43,4 +43,5 @@
     <string name="volume">Volume: %1$.2f</string>
     <string name="luas_permukaan">Luas Permukaan: %1$.2f</string>
     <string name="tinggi">Tinggi</string>
+    <string name="bagikan">Bagikan</string>
 </resources>

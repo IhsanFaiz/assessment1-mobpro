@@ -26,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -161,8 +162,24 @@ fun PersegiPanjangContent(bangunDatar: BangunDatar){
                 )
             }
 
-            val message = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0) + "\n" + stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0)
-            ShareButton(R.drawable.persegi_panjang, stringResource(R.string.persegi_panjang), message)
+
+            val context = LocalContext.current
+            val luas = (hasilBangunDatar?.luas?: 0.0).toFloat()
+            val keliling = (hasilBangunDatar?.keliling?: 0.0).toFloat()
+            val message = stringResource(R.string.persegi_panjang) +
+                    "\n" +
+                    stringResource(R.string.panjang) + ": " + panjangImage +
+                    "\n" +
+                    stringResource(R.string.lebar) + ": " + lebarImage +
+                    "\n" +
+                    stringResource(R.string.luas, luas) +
+                    "\n" +
+                    stringResource(R.string.keliling, keliling)
+
+            ShareButton(
+                context = context,
+                message = message
+            )
         }
     }
 }

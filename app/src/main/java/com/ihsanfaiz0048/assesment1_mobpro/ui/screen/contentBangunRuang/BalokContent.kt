@@ -26,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -186,12 +187,30 @@ fun BalokContent(bangunRuang: BangunRuang){
                     modifier = Modifier.padding(start = 270.dp).rotate(95f),
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
                 )
             }
 
-            val message = stringResource(R.string.volume, hasilBangunRuang?.volume?: 0.0) + "\n" + stringResource(R.string.luas_permukaan, hasilBangunRuang?.luasPermukaan?: 0.0)
-            ShareButton(R.drawable.balok, stringResource(R.string.balok), message)
+
+            val context = LocalContext.current
+            val volume = (hasilBangunRuang?.volume?: 0.0).toFloat()
+            val luasPermukaan = (hasilBangunRuang?.luasPermukaan?: 0.0).toFloat()
+            val message = stringResource(R.string.balok) +
+                    "\n" +
+                    stringResource(R.string.panjang) + ": " + panjangImage +
+                    "\n" +
+                    stringResource(R.string.lebar) + ": " + lebarImage +
+                    "\n" +
+                    stringResource(R.string.tinggi) + ": " + tinggiImage +
+                    "\n" +
+                    stringResource(R.string.volume, volume) +
+                    "\n" +
+                    stringResource(R.string.luas_permukaan, luasPermukaan)
+
+            ShareButton(
+                context = context,
+                message = message
+            )
         }
     }
 }

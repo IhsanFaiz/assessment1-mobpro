@@ -26,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -45,6 +46,7 @@ fun KubusContent(bangunRuang: BangunRuang){
     var hasilBangunRuang by remember { mutableStateOf<HasilBangunRuang?>(null) }
     var sisiImage by rememberSaveable { mutableFloatStateOf(0F) }
     var sisiError by rememberSaveable { mutableStateOf(false) }
+    val context = LocalContext.current
 
     OutlinedTextField(
         value = sisi,
@@ -141,9 +143,22 @@ fun KubusContent(bangunRuang: BangunRuang){
                 )
             }
 
-            val message = stringResource(R.string.volume, hasilBangunRuang?.volume?: 0.0) + "\n" + stringResource(R.string.luas_permukaan, hasilBangunRuang?.luasPermukaan?: 0.0)
-            ShareButton(R.drawable.kubus, stringResource(R.string.kubus), message)
+            val volume = (hasilBangunRuang?.volume?: 0.0).toFloat()
+            val luasPermukaan = (hasilBangunRuang?.luasPermukaan?: 0.0).toFloat()
+            val message = stringResource(R.string.kubus) +
+                    "\n" +
+                    stringResource(R.string.sisi) +
+                    ": " +
+                    sisiImage +
+                    "\n" +
+                    stringResource(R.string.volume, volume) +
+                    "\n" +
+                    stringResource(R.string.luas_permukaan, luasPermukaan)
 
+            ShareButton(
+                context = context,
+                message = message
+            )
         }
     }
 }

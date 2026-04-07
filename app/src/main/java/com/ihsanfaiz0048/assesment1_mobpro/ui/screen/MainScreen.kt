@@ -2,10 +2,8 @@ package com.ihsanfaiz0048.assesment1_mobpro.ui.screen
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.net.Uri
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,19 +28,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.core.content.FileProvider
-import androidx.core.graphics.createBitmap
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.navigation.Screen
 import com.ihsanfaiz0048.assesment1_mobpro.navigation.SetupNavGraph
-import java.io.File
-import java.io.FileOutputStream
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -175,51 +168,24 @@ fun ErrorHint(isError: Boolean){
     }
 }
 
-fun getBitmapFromVector(context: Context, drawableId: Int): Bitmap {
-    val drawable = AppCompatResources.getDrawable(context, drawableId)!!
-    val bitmap = createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight)
-    val canvas = android.graphics.Canvas(bitmap)
-    drawable.setBounds(0, 0, canvas.width, canvas.height)
-    drawable.draw(canvas)
-    return bitmap
-}
-
-fun saveBitmapToCache(context: Context, bitmap: Bitmap, fileName: String): Uri {
-    val file = File(context.cacheDir, "$fileName.png")
-    FileOutputStream(file).use {
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
-    }
-    return FileProvider.getUriForFile(
-        context,
-        "${context.packageName}.provider",
-        file
-    )
-}
-
-fun shareImageWithText(context: Context, uri: Uri, message: String) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "image/*"
-        putExtra(Intent.EXTRA_STREAM, uri)
+private fun shareData(context: Context, message: String){
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
         putExtra(Intent.EXTRA_TEXT, message)
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     }
-    context.startActivity(Intent.createChooser(intent, "Share via"))
+    if (shareIntent.resolveActivity(context.packageManager) != null){
+        context.startActivity(shareIntent)
+    }
 }
 
 @Composable
-fun ShareButton(icon: Int, fileName: String, message: String){
-    val context = LocalContext.current
+fun ShareButton(context: Context, message: String){
 
     Button(
-        onClick = {
-            val bitmap = getBitmapFromVector(context, icon)
-            val uri = saveBitmapToCache(context, bitmap, fileName)
-            shareImageWithText(
-                context,
-                uri,
-                message
-            )
-        }) {
-        Text("Share")
+        onClick = { shareData(context, message) },
+        modifier = Modifier.padding(top = 8.dp),
+        contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+    ) {
+        Text(text = stringResource(R.string.bagikan))
     }
 }

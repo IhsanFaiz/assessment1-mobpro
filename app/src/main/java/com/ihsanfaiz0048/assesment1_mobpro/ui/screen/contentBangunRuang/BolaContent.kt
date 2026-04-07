@@ -28,6 +28,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -139,8 +140,21 @@ fun BolaContent(bangunRuang: BangunRuang){
                 )
             }
 
-            val message = stringResource(R.string.volume, hasilBangunRuang?.volume?: 0.0) + "\n" + stringResource(R.string.luas_permukaan, hasilBangunRuang?.luasPermukaan?: 0.0)
-            ShareButton(R.drawable.bola, stringResource(R.string.bola), message)
+            val context = LocalContext.current
+            val volume = (hasilBangunRuang?.volume?: 0.0).toFloat()
+            val luasPermukaan = (hasilBangunRuang?.luasPermukaan?: 0.0).toFloat()
+            val message = stringResource(R.string.bola) +
+                    "\n" +
+                    stringResource(R.string.jariJari) + ": " + jariImage +
+                    "\n" +
+                    stringResource(R.string.volume, volume) +
+                    "\n" +
+                    stringResource(R.string.luas_permukaan, luasPermukaan)
+
+            ShareButton(
+                context = context,
+                message = message
+            )
         }
     }
 }
