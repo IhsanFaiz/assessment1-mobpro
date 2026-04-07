@@ -170,7 +170,7 @@ fun KerucutContent(bangunRuang: BangunRuang){
                     "\n" +
                     stringResource(R.string.jariJari) + ": " + jariImage +
                     "\n" +
-                    stringResource(R.string.tinggi) + ": " + tinggiImage
+                    stringResource(R.string.tinggi) + ": " + tinggiImage +
                     "\n" +
                     stringResource(R.string.volume, volume) +
                     "\n" +
