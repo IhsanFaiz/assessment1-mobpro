@@ -44,4 +44,8 @@
     <string name="luas_permukaan">Luas Permukaan: %1$.2f</string>
     <string name="tinggi">Tinggi</string>
     <string name="bagikan">Bagikan</string>
+    <string name="nama">Nama</string>
+    <string name="nama_dev" translatable="false">Ihsan Faiz</string>
+    <string name="nim" translatable="false">NIM</string>
+    <string name="nim_num" translatable="false">607062400048</string>
 </resources>

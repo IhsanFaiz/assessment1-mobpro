@@ -1,4 +1,4 @@
-package com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunDatar
+package com.ihsanfaiz0048.assesment1_mobpro.ui.screen
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -50,6 +50,8 @@ fun SettingsContent(isDarkMode: Boolean, onToggleDarkMode: () -> Unit){
             )
         }
         Dividier()
+        StaticSettingItem(stringResource(R.string.nim), stringResource(R.string.nim_num))
+        StaticSettingItem(stringResource(R.string.nama), stringResource(R.string.nama_dev))
         StaticSettingItem(stringResource(R.string.email), stringResource(R.string.devEmail))
         StaticSettingItem(stringResource(R.string.instagram), "@ihsanfa.iz")
         Spacer(modifier = Modifier.weight(1f))

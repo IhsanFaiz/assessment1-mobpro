@@ -41,4 +41,5 @@
     <string name="luas_permukaan">Surface Area: %1$.2f</string>
     <string name="tinggi">Height</string>
     <string name="bagikan">Share</string>
+    <string name="nama">Name</string>
 </resources>
