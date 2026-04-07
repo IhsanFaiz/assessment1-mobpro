@@ -37,6 +37,7 @@ import com.ihsanfaiz0048.assesment1_mobpro.model.BangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunDatar
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ErrorHint
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ShareButton
 
 @Composable
 fun PersegiContent(bangunDatar: BangunDatar){
@@ -139,6 +140,9 @@ fun PersegiContent(bangunDatar: BangunDatar){
                     fontWeight = FontWeight.Bold
                 )
             }
+
+            val message = stringResource(R.string.luas, hasilBangunDatar?.luas?: 0.0) + "\n" + stringResource(R.string.keliling, hasilBangunDatar?.keliling?: 0.0)
+            ShareButton(R.drawable.persegi, stringResource(R.string.persegi), message)
         }
     }
 }

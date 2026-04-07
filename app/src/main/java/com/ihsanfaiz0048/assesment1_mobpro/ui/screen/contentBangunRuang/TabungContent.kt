@@ -37,6 +37,7 @@ import com.ihsanfaiz0048.assesment1_mobpro.model.BangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ErrorHint
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.IconPicker
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.ShareButton
 
 @Composable
 fun TabungContent(bangunRuang: BangunRuang){
@@ -160,6 +161,9 @@ fun TabungContent(bangunRuang: BangunRuang){
                     fontWeight = FontWeight.Bold
                 )
             }
+
+            val message = stringResource(R.string.volume, hasilBangunRuang?.volume?: 0.0) + "\n" + stringResource(R.string.luas_permukaan, hasilBangunRuang?.luasPermukaan?: 0.0)
+            ShareButton(R.drawable.tabung, stringResource(R.string.tabung), message)
         }
     }
 }

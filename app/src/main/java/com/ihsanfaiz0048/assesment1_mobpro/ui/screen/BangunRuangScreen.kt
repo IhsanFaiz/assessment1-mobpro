@@ -26,6 +26,7 @@ import com.ihsanfaiz0048.assesment1_mobpro.R
 import com.ihsanfaiz0048.assesment1_mobpro.model.BangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.model.HasilBangunRuang
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.BalokContent
+import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.BolaContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.KerucutContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.KubusContent
 import com.ihsanfaiz0048.assesment1_mobpro.ui.screen.contentBangunRuang.TabungContent
@@ -138,10 +139,9 @@ fun BangunRuangScreen(){
             listBangunRuang[3].nama -> {
                 KerucutContent(listBangunRuang[3])
             }
-//            listBangunRuang[3].nama -> {
-//                KerucutContent(listBangunRuang[3])
-//            }
+            listBangunRuang[4].nama -> {
+                BolaContent(listBangunRuang[4])
+            }
         }
     }
 }
-
