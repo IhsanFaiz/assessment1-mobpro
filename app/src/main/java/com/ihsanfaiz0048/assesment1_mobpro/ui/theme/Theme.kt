@@ -1,6 +1,7 @@
 package com.ihsanfaiz0048.assesment1_mobpro.ui.theme
 
 import android.os.Build
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -33,7 +34,7 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun Assesment1mobproTheme(
-    isDarkMode: Boolean,
+    isDarkMode: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit,
 ) {

@@ -39,4 +39,5 @@
     <string name="panjang_sisi">Side Length</string>
     <string name="volume">Volume: %1$.2f</string>
     <string name="luas_permukaan">Surface Area: %1$.2f</string>
+    <string name="tinggi">Height</string>
 </resources>

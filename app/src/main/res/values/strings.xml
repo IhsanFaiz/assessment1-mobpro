@@ -42,4 +42,5 @@
     <string name="panjang_sisi">Panjang Sisi</string>
     <string name="volume">Volume: %1$.2f</string>
     <string name="luas_permukaan">Luas Permukaan: %1$.2f</string>
+    <string name="tinggi">Tinggi</string>
 </resources>
